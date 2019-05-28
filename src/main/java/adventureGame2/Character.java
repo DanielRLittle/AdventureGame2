@@ -14,13 +14,13 @@ public abstract class Character {
 
 	}
 	
-	public String input() {
+	public static String input() {
 		Scanner s = new Scanner(System.in);
 		String input = s.nextLine();
 		return input;
 	}
 	
-	public int input2() {
+	public static int input2() {
 		Scanner s = new Scanner(System.in);
 		int input = s.nextInt();
 		return input;
