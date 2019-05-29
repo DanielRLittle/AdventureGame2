@@ -32,6 +32,8 @@ public class Introduction {
 		System.out.println(namey+": I guess I'm going East...");
 		w8();
 		System.out.println("*Your compass grows brighter and brighter until you find a letter in front of you on the floor, help? You pick it up to read...*");
+		POI.letter();
+		System.out.println(namey+": How strange... I guess I can't just sit here, I need to find my own way out.");
 		w8();
 	}
 	public static void ending() {

@@ -26,10 +26,42 @@ public class POI {
 	}
 	
 	private void heal() {
-		Game.player.setHealth(120);
+		if (Game.player.getHealth()>60) {
+			Game.player.setHealth(100);
+		}
+		else {
+			Game.player.setHealth(Game.player.getHealth() + 40);
+		}
 		System.out.println("*You found a strange liquid in a glass vial, you're thirsty so you thought... Why not?*");
 		Introduction.w8();
 		System.out.println("You are fully healed. Health = "+Game.player.getHealth());
+	}
+	
+	public static void letter() {
+		Introduction.w8();
+		System.out.println("  _____________________________________________________");
+		System.out.println(" |                                                     |");
+		System.out.println(" |     "+Game.player.getName());
+		System.out.println(" |                                                     |");
+		System.out.println(" |      If you are reading this my friend, then we     |");
+		System.out.println(" |      are truly blessed. You fell unconcious and     |");
+		System.out.println(" |      we had no choice but to leave you.             |");
+		System.out.println(" |          We were being followed, and if you are     |");
+		System.out.println(" |      still alive, you are likely still a target.    |");
+		System.out.println(" |      I cannot say what is watching you, or          |");
+		System.out.println(" |      whether it is even a threat, but best stay     |");
+		System.out.println(" |      on the side of caution.                        |");
+		System.out.println(" |          Do not fear however. Once we can track     |");
+		System.out.println(" |      your exact location we can come back via       |");
+		System.out.println(" |      helicopter and pick you up. Try and stay       |");
+		System.out.println(" |      safe my friend, I hope to see you again        |");
+		System.out.println(" |      soon...                                        |");
+		System.out.println(" |                Your Dear Friend                     |");
+		System.out.println(" |                      Jerry                          |");
+		System.out.println(" |                                                     |");
+		System.out.println(" |                                                     |");
+		System.out.println(" |                                                     |");
+		System.out.println(" |_____________________________________________________|");
 	}
 	
 	public double distancePOI() {
@@ -56,10 +88,10 @@ public class POI {
 		int coin = r.nextInt(2);
 		int ver = r.nextInt(40);
 		if (coin==0) {
-			Game.monster.setVertical(Game.player.getVertical() - 30 - ver);
+			Game.pOI.setVert(Game.player.getVertical() - 30 - ver);
 		}
 		else if(coin==1) {
-			Game.monster.setVertical(Game.player.getVertical() + 30 + ver);
+			Game.pOI.setVert(Game.player.getVertical() + 30 + ver);
 		}		
 	}
 	

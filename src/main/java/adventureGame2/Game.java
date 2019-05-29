@@ -2,7 +2,7 @@ package adventureGame2;
 
 public class Game {
 	
-	static Player player = new Player(null, 0, 0, 120);
+	static Player player = new Player(null, 0, 0, 100);
 	static Monster monster = new Monster(0, 0, 10);
 	static POI pOI = new POI(0, 0);
 	static double distance;
@@ -41,7 +41,9 @@ public class Game {
 					Game.pOI.encounterPOI();
 				}
 				turnsLeft --;
-				System.out.println("Survive "+turnsLeft+" more turns!");
+				if(Game.player.getHealth()!=0) {
+					System.out.println("Survive "+turnsLeft+" more turns!");
+				}
 				if (turnsLeft == 5) {
 					System.out.println("You hear a faint sound from above, it slowly gets louder");
 				}

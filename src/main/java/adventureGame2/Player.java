@@ -62,7 +62,7 @@ public class Player extends Character {
 
 	}
 	public void hit() {
-		Game.player.setHealth(Game.player.getHealth() - 40);
+		Game.player.setHealth(Game.player.getHealth() - 20);
 		int currentHP = Game.player.getHealth();
 		System.out.println("*A monster appears from nowhere out of the fog! It hits you and you shriek in pain! Health = "+Game.player.getHealth()+"*");
 		if(currentHP <= 0) {
@@ -77,5 +77,4 @@ public class Player extends Character {
 		System.out.println("The red light on your compass reads: "+red);
 		System.out.println("The green light on your compass reads: "+green);
 	}
-
 }
